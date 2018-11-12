@@ -1,0 +1,102 @@
+<project 
+  xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	 
+
+  	 <modelVersion>4.0.0</modelVersion>
+	 
+  	 <!-- Entered in Spring Initizer. Group id + Artifact id uniquely identifies the maven dependency -->
+	 <groupId>com.arjunsk</groupId>
+	 <artifactId>HelloWorld2</artifactId>
+
+	 <version>0.0.1-SNAPSHOT</version>
+	 <packaging>jar</packaging>
+	
+	 <name>HelloWorld2</name>
+	 <url>http://maven.apache.org</url>
+
+	<!-- If we add parent, then we don't need to mention verison number in any of the dependencies -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.5.RELEASE</version>
+		<relativePath/>
+	</parent>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version> <!-- Set the jdk version-->
+	</properties>
+
+
+  <dependencies>
+  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- ## START Spring Boot-->
+	<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-test</artifactId>
+	    <scope>test</scope> <!-- Specifies the scope to include this dependency-->
+	</dependency>
+	<!-- ## STOP Spring Boot-->
+	
+
+	<!-- ## START Database --> 
+	<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+	<dependency>
+	    <groupId>com.h2database</groupId>
+	    <artifactId>h2</artifactId>
+    </dependency>
+	
+	    
+    <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <!-- ## STOP Database-->
+
+
+    <!-- ## START REST -->
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+	<dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-databind</artifactId>
+	    <version>2.9.7</version>
+	</dependency>
+
+	<!-- ## STOP REST -->
+	
+
+
+
+
+  </dependencies>
+  
+  <build>
+
+  		<!-- START Build time dependency -->
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+
+		<!--  STOP Build time dependecy -->
+ </build>
+  
+</project>
